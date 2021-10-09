@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Szczegóły todo</title>
+</head>
+<body>
+    <form method="Post" action="">
+        <h1> Zmień </h1>
+          {% for todo in todo1 %}
+           <input type="hidden" name="id" value={{todo[0]}}" ><br>
+           Tytuł:<br>
+           <input type="text" name="title" value="{{todo[1]}}"><br>
+           Opis:<br>
+           <input type="text" name="description" value="{{todo[2]}}"><br>
+           Zrobione:<br>
+           <input type="checkbox" name="done" value="{{todo[3]}}" ><br><br>
+           {% endfor %}
+           <br>
+           <input type="submit" value="Zapisz">
+       
+        </form>
+</body>
+</html>
